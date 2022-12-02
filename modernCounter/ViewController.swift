@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     @IBAction func tapToReset(_ sender: Any) {
         lastValue.text = "Последнее значение: \n \(totalScore)"
         totalScore = 0
+        currentScore.text = "0"
     }
 }
 
