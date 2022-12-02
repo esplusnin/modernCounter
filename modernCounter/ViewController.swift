@@ -8,12 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var lastValue: UILabel!
+    @IBOutlet weak var currentScore: UILabel!
+    @IBOutlet weak var AddScoreButton : UIButton!
+    @IBOutlet weak var ResetScoreButton: UIButton!
+    
+    var totalScore = 0
+    
+    @IBAction func tapToAddScore(_ sender: Any) {
+        totalScore += 1
+        currentScore.text = "\(totalScore)"
     }
-
-
+    @IBAction func tapToReset(_ sender: Any) {
+        lastValue.text = "Последнее значение: \n \(totalScore)"
+        totalScore = 0
+    }
 }
 
